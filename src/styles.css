@@ -4,16 +4,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
   font-size: 62.5%;
-  font-family: 'Poppins', sans-serif;
+
+  --primary-1: #776ad4;
+  --primary-2: #5648c2;
+  
+  --neutral-0: #000;
+  --neutral-1: #9c9b9c;
+  --neutral-2: #fff;
 }
 
 body {
   font-size: 1.6rem;
-  background-color: #aca1ff;
+  background-color: var(--primary-1);
 
   height: 100vh;
   display: flex;
@@ -22,7 +29,7 @@ body {
 }
 
 main {
-  background-color: white;
+  background-color: var(--neutral-2);
   box-shadow: 0 .5rem 1rem rgba(26, 20, 66, 0.1);  
 
   width: 70vw;
@@ -31,4 +38,47 @@ main {
 
   display: flex;
   justify-content: center;
+}
+
+#search-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-wrapper input {
+  padding: .5rem;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom: .3rem solid var(--primary-1);
+  font-size: 1.8rem;
+}
+
+#search-wrapper input::placeholder {
+  color: var(--primary-2);
+}
+
+#search-wrapper input:focus {
+  border-bottom:.3rem solid var(--primary-2);
+}
+
+#search-wrapper button {
+  padding: .5rem 0;
+  border-radius: .5rem;
+  width: 25%;
+  background-color: var(--primary-1);
+  border: none;
+  outline: none;
+  color: var(--neutral-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#search-wrapper button:hover {
+  background-color: var(--primary-2);
 }
