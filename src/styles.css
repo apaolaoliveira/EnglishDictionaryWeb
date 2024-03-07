@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:not(i){
   font-family: 'Poppins', sans-serif;
 }
 
@@ -13,14 +16,16 @@
   --primary-1: #776ad4;
   --primary-2: #5648c2;
   --primary-3: #1f194c;
+  --primary-4: #5a4c96;
   
   --neutral-0: #000;
-  --neutral-1: #9c9b9c;
+  --neutral-1: #2f324d;
   --neutral-2: #fff;
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  font-weight: 500;
   background-color: var(--primary-1);
 
   height: 100vh;
@@ -48,28 +53,28 @@ main {
   background-color: transparent;
 }
 
-#search-wrapper {
+.search-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-#search-wrapper input {
+.search-wrapper input {
   padding: .5rem;
   width: 70%;
   border-bottom: .3rem solid var(--primary-1);
   font-size: 1.8rem;
 }
 
-#search-wrapper input::placeholder {
+.search-wrapper input::placeholder {
   color: var(--primary-2);
 }
 
-#search-wrapper input:focus {
+.search-wrapper input:focus {
   border-bottom:.3rem solid var(--primary-2);
 }
 
-#search-wrapper button {
+.search-wrapper button {
   padding: .5rem 0;
   border-radius: .5rem;
   width: 25%;
@@ -83,22 +88,54 @@ main {
   cursor: pointer;
 }
 
-#search-wrapper button:hover {
+.search-wrapper button:hover {
   background-color: var(--primary-2) !important;
 }
 
-#word {
+.word {
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   margin-top: 4rem;
 }
 
-#word h3 {
+.word h3 {
   font-size: 3rem;
   color: var(--primary-3);
 }
 
-#word button {
+.word button {
   color: var(--primary-1);
+  font-size: 2.1rem;
+  cursor: pointer;
+}
+
+.phonetic {
+  display: flex;
+  gap: .5rem;
+  margin: 1rem 0;
+  color: var(--primary-4);
+}
+
+.source {
+  display: flex;
+  gap: .5rem;
+  margin:.5rem 0 2rem;
+  color: var(--neutral-1);
+}
+
+.meaning #category {
+  font-weight: 700;
   font-size: 2rem;
+}
+
+.meaning #definition {
+  color: var(--neutral-1);
+  margin: 1rem 0 2rem;
+}
+
+.meaning #example {
+  color: var(--primary-4);
+  font-style: italic;
+  border-left: .5rem solid var(--primary-1);
+  padding-left: 2rem;
 }
