@@ -28,15 +28,23 @@ body {
 
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-2);
+  margin-bottom: 1rem;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--primary-2);
-  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
@@ -55,19 +63,22 @@ main {
 
 .word {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
-.word h3 {
+.word #word-title {
   font-size: 3rem;
   color: var(--primary-3);
 }
 
-.word button {
+.word #audio-btn {
   color: var(--primary-1);
   font-size: 2.1rem;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 .phonetic {
@@ -80,6 +91,11 @@ main {
 .source {
   margin: .5rem 0 3rem;
   color: var(--neutral-1);
+  white-space: wrap;
+}
+
+.source p {
+  display: inline;
 }
 
 .meaning {

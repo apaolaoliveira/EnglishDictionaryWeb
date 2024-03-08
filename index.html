@@ -13,29 +13,34 @@
 <body>
   <audio id="sound"></audio>
   <main>
-    <h1>English Dictionary</h1>
+    <header aria-labelledby="title">
+      <i class="fa-solid fa-book"></i>
+      <h1 id="title">English Dictionary</h1>
+    </header>
+
     <form class="search-wrapper" onsubmit="event.preventDefault();" role="search">
       <input type="search" id="search-word" placeholder="search word" aria-label="search word" autofocus>
-      <button id="search" title="Search" aria-label="Search" type="submit">
+      <button id="search-btn" title="search" aria-label="search" type="submit">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
     </form>
 
-    <section class="result-wrapper" id="result">
+    <section class="result-wrapper" id="result" aria-labelledby="title">
       <div class="word">
-        <h3 id="word-title">Hello</h3>        
-        <button title="Play audio" aria-label="Play word's audio">
+        <h2 id="word-title">Hello</h2>        
+        <button id="audio-btn" title="Play audio" aria-label="Play word's audio">
           <i class="fa-solid fa-volume-high"></i>
         </button>
       </div>
 
       <div class="phonetic">
         <p>pronunciation</p>
-        <p>/hello/</p>
+        <p id="pronunciation">/hello/</p>
       </div>
 
       <div class="source">
-        <p id="origin">origin from early 19th century: variant of earlier hollo ; related to holla.</p>
+        <p>origin from</p>
+        <p id="origin">early 19th century: variant of earlier hollo ; related to holla.</p>
       </div>
            
       <div class="meaning">

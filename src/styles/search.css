@@ -1,6 +1,6 @@
 :root {
-  --rad: .8rem;
-  --dur: .5s;
+  --rad: .5rem;
+  --dur: .4s;
   --color-dark: #2f2f2f;
   --height: 5rem;
   --btn-width: 6rem;
@@ -14,7 +14,7 @@ form {
   outline: .3rem solid var(--primary-1);
 }
 
-input, button {
+input, #search-btn {
   height: var(--height);
   font-family: var(--font-fam);
   border: 0;
@@ -22,7 +22,7 @@ input, button {
   font-size: 1.8rem;
 }
 
-button {
+#search-btn {
   color: var(--neutral-2) !important;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@ input[type="search"]::-webkit-search-cancel-button {
   appearance: none;
 }
 
-button {
+#search-btn {
   display: none;
   position: absolute;
   top: 0;
@@ -59,7 +59,7 @@ button {
 input:not(:placeholder-shown) {
   border-radius: var(--rad) 0 0 var(--rad);
   width: calc(100% - var(--btn-width));
-  + button {
+  + #search-btn {
     display: block;
   }
 }

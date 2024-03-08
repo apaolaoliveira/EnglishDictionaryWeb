@@ -2,7 +2,7 @@ class EnglishDictionary {
   API_URL = 'https://api.dictionaryapi.dev/api/v2/entries/en/';
   result = document.querySelector('#result');
   sound = document.querySelector('#sound');
-  search = document.querySelector('#search');
+  search = document.querySelector('#search-btn');
 
   constructor() {
     this.search.addEventListener('click', () => {
