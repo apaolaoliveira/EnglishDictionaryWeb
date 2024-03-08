@@ -32,12 +32,20 @@ body {
   justify-content: center;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-2);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
 main {
   background-color: var(--neutral-2);
   box-shadow: 0 .5rem 1rem rgba(26, 20, 66, 0.1);  
 
   width: 50vw;
-  padding: 8rem 5rem;
+  padding: 4rem;
   border-radius: 1rem;
 
   display: flex;
@@ -48,7 +56,7 @@ main {
 .word {
   display: flex;
   gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .word h3 {
@@ -65,13 +73,19 @@ main {
 .phonetic {
   display: flex;
   gap: .5rem;
-  margin: 1rem 0;
+  margin: .2rem 0 1rem;
   color: var(--primary-4);
 }
 
 .source {
-  margin: .5rem 0 2rem;
+  margin: .5rem 0 3rem;
   color: var(--neutral-1);
+}
+
+.meaning {
+  border-radius: .8rem;
+  padding: 2rem 1.5rem 3rem;
+  background-color: #f6f1ff;
 }
 
 .meaning #category {
