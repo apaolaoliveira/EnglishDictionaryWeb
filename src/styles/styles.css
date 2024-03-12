@@ -84,18 +84,8 @@ main {
 .phonetic {
   display: flex;
   gap: .5rem;
-  margin: .2rem 0 1rem;
+  margin: .2rem 0 1.5rem;
   color: var(--primary-4);
-}
-
-.source {
-  margin: .5rem 0 3rem;
-  color: var(--neutral-1);
-  white-space: wrap;
-}
-
-.source p {
-  display: inline;
 }
 
 .meaning {
@@ -119,4 +109,8 @@ main {
   font-style: italic;
   border-left: .5rem solid var(--primary-1);
   padding-left: 2rem;
+}
+
+.hide {
+  display: none;
 }
