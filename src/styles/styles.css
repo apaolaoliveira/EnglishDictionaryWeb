@@ -61,11 +61,15 @@ main {
   flex-direction: column;
 }
 
+#message {
+  margin-top: 1rem;
+}
+
 .word {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .word #word-title {
