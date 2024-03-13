@@ -17,9 +17,11 @@ class EnglishDictionary {
     this.displayMessage(`Searching the meaning of "<strong>${word}</strong>"`); 
     
     fetch(`${this.API_URL}${word}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if(!response) throw new Error('Word not found');
+        return response.json();
+      })
       .then((data) => {
-        console.log(data);
         this.displayResponse({
           word: data[0].word,
           pronunciation: data[0].phonetics[0].text,
@@ -29,11 +31,10 @@ class EnglishDictionary {
           audio: data[0].phonetics[1].audio,
         })
       })
-      .catch(this.displayMessage('Could not find the word'));
+      .catch(() => this.displayMessage('Could not find the word'));
   }
 
   displayResponse(data) {
-    console.log(data);
     const elementMap = {
       'word-title': data.word,
       'pronunciation': data.pronunciation,
@@ -49,6 +50,11 @@ class EnglishDictionary {
         element.classList.add('hide');
         return;
       }
+
+      if(id === 'pronunciation'){
+        element.innerText = 'pronunciation ' + value;
+        return;
+      }
       
       element.classList.remove('hide');
       element.innerText = value;
@@ -56,8 +62,10 @@ class EnglishDictionary {
 
     this.audio.setAttribute('src', data.audio);
     this.audioBtn.addEventListener('click', () => this.audio.play());
+    
     this.message.classList.add('hide');
     this.result.classList.remove('hide');
+    this.inputWord.value = '';
   }
 
   displayMessage(text){
