@@ -69,6 +69,7 @@ class EnglishDictionary {
   }
 
   displayMessage(text){
+    this.message.classList.remove('hide');
     this.message.innerHTML = text;
   }
 }
